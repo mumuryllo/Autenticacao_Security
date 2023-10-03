@@ -17,9 +17,11 @@ public class CriarUsuarioDTO {
     @NotBlank
     @Email(message = "Formato de e-mail está inválido!")
     private String username;
+
     @NotBlank
     @Size(min = 6,max = 6)
     private String password;
-    private Role role;
+
+    private Role role=Role.ROLE_COLABORADOR;
 
 }

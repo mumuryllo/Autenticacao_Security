@@ -29,7 +29,7 @@ public class UsuarioController {
     }
 
     @GetMapping("/{id}")
-    @PreAuthorize("hasRole('COLABORADOR') OR hasRole('GESTOR')")
+    @PreAuthorize("hasRole('COLABORADOR')")
     public ResponseEntity<UsuarioResponseDto> getById(@PathVariable Long id){
         Usuario user = usuarioService.buscarId(id);
         return ResponseEntity.ok(UsuarioMapper.toDto(user));
