@@ -12,6 +12,9 @@ import javax.validation.constraints.Size;
 public class CriarUsuarioDTO {
 
     @NotBlank
+    private String nome;
+
+    @NotBlank
     @Email(message = "Formato de e-mail está inválido!")
     private String username;
     @NotBlank
